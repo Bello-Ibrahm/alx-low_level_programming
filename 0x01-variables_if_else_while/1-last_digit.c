@@ -4,12 +4,14 @@
 /* more headers goes there */
 
 /**
- * Main - determine if greater, less than or zero
+ * main - Determines either greater than 5, less than 6, or is zero(0)
+ * 
  * Return: always 0 (Success)
  * */
 int main(void)
 {
 	int n, l; 	
+
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
