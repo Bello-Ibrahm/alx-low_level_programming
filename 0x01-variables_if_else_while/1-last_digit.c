@@ -3,17 +3,16 @@
 #include <stdio.h>
 
 /**
- * main - Determines either greater than 5, less than 6, or is zero(0)
- * 
- * Return: always 0 (Success)
- * */
+ * main - Determines either greater than 5, is less than 6, or is 0
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-	int n, l; 	
+	int n, l;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	/* your code goes there */
 	l = n % 10;
 	if (l > 5)
 	{
