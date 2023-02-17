@@ -4,7 +4,7 @@
 /* more headers goes there */
 
 /**
- * main - Checks if the last digit of n
+ * main - determine if greater, less than or zero
  * Return: always 0 (Success)
  * */
 int main(void)
