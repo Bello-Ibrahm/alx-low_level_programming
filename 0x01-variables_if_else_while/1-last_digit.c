@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* more headers goes there */
 
 /**
  * main - Determines either greater than 5, less than 6, or is zero(0)
