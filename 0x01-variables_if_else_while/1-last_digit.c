@@ -4,7 +4,7 @@
 /* more headers goes there */
 
 /**
- * main - determine if greater, less than or zero
+ * Main - determine if greater, less than or zero
  * Return: always 0 (Success)
  * */
 int main(void)
