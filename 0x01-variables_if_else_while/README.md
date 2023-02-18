@@ -1,5 +1,5 @@
 ## 0. Positive anything is better than negative nothing
-[0-positive_or_negative.c](0-positive_or_negative.c)
+[0-positive_or_negative.c](0-positive_or_negative.c).
 This program will assign a random number to the variable n each time it is executed. Complete the source code in order to print whether the number stored in the variable n is positive or negative.
 
 * You can find the source code [here](https://github.com/holbertonschool/0x01.c/blob/master/0-positive_or_negative_c)
@@ -14,10 +14,10 @@ This program will assign a random number to the variable n each time it is execu
    * if the number is less than 0: is negative
   * followed by a new line
 ## 1. The last digit
-[1-last_digit.c](1-last_digit.c)
+[1-last_digit.c](1-last_digit.c).
 This program will assign a random number to the variable n each time it is executed. Complete the source code in order to print the last digit of the number stored in the variable n.
 
-* You can find the source code here
+* You can find the source code [here](https://github.com/holbertonschool/0x01.c/blob/master/1-last_digit_c)
 * The variable n will store a different value every time you run this program
 * You don’t have to understand what rand, srand, and RAND_MAX do. Please do not touch this code
 * The output of the program should be:
@@ -38,7 +38,7 @@ Write a program that prints the alphabet in lowercase, followed by a new line.
 * You can only use putchar twice in your code
 
 ## 3. alphABET
-[3-print_alphabets.c](3-print_alphabets.c)
+[3-print_alphabets.c](3-print_alphabets.c).
 Write a program that prints the alphabet in lowercase, and then in uppercase, followed by a new line.
 
 * You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
@@ -55,7 +55,7 @@ Write a program that prints the alphabet in lowercase, followed by a new line.
 * You can only use putchar twice in your code
 
 ## 5. Numbers
-[5-print_numbers.c](5-print_numbers.c)
+[5-print_numbers.c](5-print_numbers.c).
 Write a program that prints all single digit numbers of base 10 starting from 0, followed by a new line.
 
 * All your code should be in the main function
