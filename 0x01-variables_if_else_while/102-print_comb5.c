@@ -7,17 +7,18 @@
  */
 int main(void)
 {
-	int w, x, y, z, opt1, opt2;
+int w, x, y, z, opt1, opt2;
 
-	w = x = y = z = 48;
-	while (z < 58)
+w = x = y = z = 48;
+while (z < 58)
+{
+	y = 48;
+	while (y < 58)
 	{
-		y = 48;
-		while (y < 58)
+		x = 48;
+		while (x < 58)
 		{
-			x = 48;
-			while (x < 58)
-				w = 48;
+			w = 48;
 			while (w < 58)
 			{
 				opt1 = (z * 10) + y;
@@ -30,9 +31,7 @@ int main(void)
 					putchar(x);
 					putchar(w);
 					if (z == 57 && y == 56 && x == 57 && w == 57)
-					{
 						break;
-					}
 					putchar(',');
 					putchar(' ');
 				}
