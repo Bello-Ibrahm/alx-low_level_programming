@@ -1,24 +1,23 @@
 #include "main.h"
-
 /**
  * jack_bauer - main thing
+ *
  */
 void jack_bauer(void)
 {
-	int x;
-	int y;
-	
-	for (x = 0; x <= 23; x++)
+	int i;
+	int j;
+
+	for (i = 0; i <= 23; i++)
 	{
-		for (y = 0; y <= 59; y++)
+		for (j = 0; j <= 59; j++)
 		{
-			_putchar(x / 10 + '0');
-			_putchar(x % 10 + '0');
+			_putchar(i / 10 + '0');
+			_putchar(i % 10 + '0');
 			_putchar(':');
-			_putchar(y / 10 + '0');
-			_putchar(y % 10 + '0');
-			_putchar('\n');	
+			_putchar(j / 10 + '0');
+			_putchar(j % 10 + '0');
+			_putchar('\n');
 		}
 	}
 }
-
