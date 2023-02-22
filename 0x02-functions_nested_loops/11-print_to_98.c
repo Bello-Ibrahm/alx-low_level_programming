@@ -4,7 +4,7 @@
 
 /**
  * print_to_98 - print n to 98 followd by a new line
- *
+ * @n: parameter for number
  * Return: Always 0 (Success)
  */
 
