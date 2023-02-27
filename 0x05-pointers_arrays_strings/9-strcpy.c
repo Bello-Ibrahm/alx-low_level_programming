@@ -1,16 +1,19 @@
 #include "main.h"
+#include "2-strlen.c"
 
 /**
- * char *_strcpy - a function that copies the string pointed to by src
- * @dest: copy to
- * @src: copy from
- * Return: string
+ * _strcpy - main function to copy
+ *
+ * @dest: destination to copy
+ * @src: src
+ *
+ * Return: a character value
  */
 char *_strcpy(char *dest, char *src)
 {
-	int i = 0;
+	int i;
 
-	for (; src[i] != '\0'; i++)
+	for (i = 0; i <= _strlen(src); i++)
 	{
 		dest[i] = src[i];
 	}
