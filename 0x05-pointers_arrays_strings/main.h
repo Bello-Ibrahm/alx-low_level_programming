@@ -82,6 +82,10 @@ void print_to_98(int n);
  */
 void print_times_table(int n);
 
+
+/* 0X05. C-POINTERS, ARRAYS AND STRINGS */
+
+
 /** 
  * reset_to_98 - Reset variable to 98 
  *
@@ -110,6 +114,50 @@ int _strlen(char *s);
  */
 void _puts(char *str);
 
+/**
+ *
+ *
+ *
+ */
+void print_rev(char *s);
 
+/**
+ *
+ *
+ *
+ *
+ */
+void rev_string(char *s);
+
+/**
+ *
+ *
+ *
+ */
+void puts2(char *str);
+
+/**
+ *
+ *
+ *
+ *
+ */
+void puts_half(char *str);
+
+/**
+ *
+ *
+ *
+ *
+ */
+void print_array(int *a, int n);
+
+/**
+ *
+ *
+ *
+ *
+ */
+char *_strcpy(char *dest, char *src);
 
 #endif
