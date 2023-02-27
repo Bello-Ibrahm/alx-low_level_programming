@@ -18,6 +18,7 @@ void swap_int(int *a, int *b);
  * _strlen - Return the length of a string
  *
  * @s: Pointer variable
+ * return: Returns length
  */
 int _strlen(char *s);
 
