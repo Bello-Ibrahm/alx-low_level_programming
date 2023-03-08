@@ -104,15 +104,14 @@ Prototype: `void set_string(char **s, char *to);`
 [100-set_string.c](100-set_string.c)
 Compile code: `gcc -Wall -pedantic -Werror -Wextra -std=gnu89 100-main.c 100-set_string.c -o 100-set_string`
 
-
 ## 9. My primary goal of hacking was the intellectual curiosity, the seduction of adventure
-Create a file that contains the password for the [https://github.com/holbertonschool/0x06.c](crackme2) executable.
+Create a file that contains the password for the [crackme2](https://github.com/holbertonschool/0x06.c) executable.
 
 * Your file should contain the exact password, no new line, no extra space
 * `ltrace`, `ldd`, `gdb` and `objdump` can help
 * You may need to install the `openssl` library to run the crakme2 program: `sudo apt install libssl-dev`
 * Edit the source list `sudo nano /etc/apt/sources.list` to add the following line: `deb http://security.ubuntu.com/ubuntu xenial-security main` Then `sudo apt update` and `sudo apt install libssl1.0.0`
 
-More resources [https://www.linux.com/training-tutorials/cracking-simple-passworded-file-beginners-guide-security/](here)
+More resources [Here](https://www.linux.com/training-tutorials/cracking-simple-passworded-file-beginners-guide-security/)
 
 [101-crackme_password](101-crackme_password)
