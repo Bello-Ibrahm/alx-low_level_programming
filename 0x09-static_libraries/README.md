@@ -122,4 +122,16 @@ _putchar.o:
 `gcc -std=gnu89 main.c -L. -lmy -o quote`
 
 
+## 1. Without libraries what have we? We have no past and no future
+Create a script called `create_static_lib.sh` that creates a static library called `liball.a` from all the `.c` files that are in the current directory.
+
+[create_static_lib.sh](create_static_lib.sh)
+
+After creating: `chmod u+x create_static_lib.sh`
+
+run `./create_static_lib.sh`
+
+`ls *.a`
+
+`ar -t liball.a`
 
