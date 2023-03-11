@@ -21,6 +21,6 @@ int main(int argc, char *argv[])
 	{
 		multiplication *= atoi(argv[i]);
 	}
-	printf("%d\n", multiplication)
+	printf("%d\n", multiplication);
 	return (0);
 }
