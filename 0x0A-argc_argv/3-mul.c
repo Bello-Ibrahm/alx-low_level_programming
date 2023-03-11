@@ -15,16 +15,16 @@
  */
 int main(int argc, char* argv[])
 {
-	int i; 	
-	int sum = 1;	
-	
+	int i, multiplication;
+       
+	multiplication = 1;
 	if (argc > 2)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			sum *= atoi(argv[i]);
+			multiplication *= atoi(argv[i]);
 		}
-		printf("%d\n", sum);
+		printf("%d\n", multiplication);
 		return (0);
 	}
 	else
