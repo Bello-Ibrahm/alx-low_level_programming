@@ -11,14 +11,14 @@
  * @argc: This is the argument count
  * @argv: This is the argument vector
  *
- * Return: This return to 0
+ * Return: This return to 1 if error else 0
  */
 int main(int argc, char* argv[])
 {
 	int i; 	
 	int sum = 1;	
 	
-	if (argc > 1)
+	if (argc > 2)
 	{
 		for (i = 1; i < argc; i++)
 		{
