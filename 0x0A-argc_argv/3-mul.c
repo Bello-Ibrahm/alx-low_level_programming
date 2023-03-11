@@ -13,14 +13,23 @@
  *
  * Return: This return to 1 if error else 0
  */
-int main(int argc, char  *argv[])
+int main(int argc, char* argv[])
 {
-	if (argc == 3)
+	int i, multiplication;
+       
+	multiplication = 1;
+	if (argc > 2)
 	{
-		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
+		for (i = 1; i < argc; i++)
+		{
+			multiplication *= atoi(argv[i]);
+		}
+		printf("%d\n", multiplication);
 		return (0);
 	}
 	else
+	{
 		printf("Error\n");
-	return (1);
+		return (1);
+	}
 }
