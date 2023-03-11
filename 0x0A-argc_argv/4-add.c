@@ -20,22 +20,27 @@ int main(int argc, char* argv[])
        
 	sum = 0;
 
-	for (i = 1; i < argc; i++)
+	if (argc > 1)
 	{
-		if (i == 0)
+
+		for (i = 1; i < argc; i++)
 		{
-			printf("%d\n", i);
+			if (*argv[i] >= 'a' && *argv[i] <= 'z')
+			{
+				printf("Error\n");
+				return (1);
+			}
+			else
+			{
+				sum += atoi(argv[i]);
+			}
 		}
-		if (*argv[i] >= 'a' && *argv[i] <= 'z')
-		{
-			printf("Error\n");
-			return (1);
-		}
-		else
-		{
-			sum += atoi(argv[i]);
-		}
+		printf("%d\n", sum);
+		return (0);
 	}
-	printf("%d\n", sum);
-	return (0);
+	else
+	{
+		printf("%d\n", 0);
+		return (1);
+	}
 }
