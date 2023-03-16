@@ -114,7 +114,7 @@ julien@ubuntu:~/0x0a. malloc, free$ ./s
 ALX SE
 julien@ubuntu:~/0x0a. malloc, free$ 
 ```
-[1-strdup.c](: 1-strdup.c)
+[1-strdup.c](1-strdup.c)
 
 ## 2. He who is not courageous enough to take risks will accomplish nothing in life
 Write a function that concatenates two strings.
