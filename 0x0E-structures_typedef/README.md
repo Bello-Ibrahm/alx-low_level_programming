@@ -3,9 +3,9 @@
 ## 0.Poppy
 Define a new type struct dog with the following elements:
 
-`name`, type = `char *`
-`age`, type = `float`
-`owner`, type = `char *`
+* `name`, type = `char *`
+* `age`, type = `float`
+* `owner`, type = `char *`
 
 ```
 julien@ubuntu:~/0x0d. structures, typedef$ cat 0-main.c
