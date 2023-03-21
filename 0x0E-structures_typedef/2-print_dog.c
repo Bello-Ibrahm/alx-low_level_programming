@@ -3,10 +3,10 @@
 #include "dog.h"
 
 /**
- * print_dog - print structure dog
- * @d: struct dog
+ * print_dog - Prints the structure dog
+ *
+ * @d: structure dog
  */
-
 void print_dog(struct dog *d)
 {
 	if (d != NULL)
@@ -16,17 +16,17 @@ void print_dog(struct dog *d)
 			printf("Name: (nil)\n");
 		}
 		else
+		{
 			printf("Name: %s\n", d->name);
-		
-		printf("Age: %f\n", d->age);
+		}
+		printf("%f\n", d->age);
 		if (d->owner == NULL)
 		{
 			printf("Owner: (nil)\n");
 		}
 		else
 		{
-			printf("Owner: %s\n", d->owner);
+			printf("%s\n", d->owner);
 		}
-
 	}
 }
