@@ -8,31 +8,26 @@
  *
  * Return: return something
  */
-int main(int ac, char *av[])
-{
-	int numb1, numb2;
-	int (*fun)(int, int);
-	char *c = av[2];
 
-	if (ac != 4)
+int main(int argc, char *argv[])
+{
+	if (argc == 4)
 	{
-		printf("Error\n");
-		exit(98);
+		int a;
+		int b;
+		int (*func)(int, int);
+
+		a = atoi(argv[1]);
+		b = atoi(argv[3]);
+		func = get_op_func(argv[2]);
+		if ((*argv[2] == '%' || *argv[2] == '/') && b == 0)
+		{
+			printf("Error\n");
+			exit(100);
+		}
+		printf("%d\n", func(a, b));
+		return (0);
 	}
-	if ((*c != '+' && *c != '-' && *c != '*' && *c != '/' && *c != '%') ||
-			*(c + 1) != 0)
-	{
-		printf("Error\n");
-		exit(99);
-	}
-	numb1 = atoi(av[1]);
-	numb2 = atoi(av[3]);
-	if ((*c == '/' || *c == '%') && numb2 == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
-	fun = get_op_func(c);
-	printf("%d\n", fun(numb1, numb2));
-	return (0);
+	printf("Error\n");
+	exit(98);
 }
