@@ -2,7 +2,7 @@
 /**
  * list_len - length of list_t struct
  * @h: head node
- * @Return: number of elements
+ * Return: number of elements
  */
 size_t list_len(const list_t *h)
 {
@@ -13,5 +13,6 @@ size_t list_len(const list_t *h)
 		count++;
 		h = h->next;
 	}
+
 	return (count);
 }
