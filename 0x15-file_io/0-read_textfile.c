@@ -6,29 +6,28 @@
  * @letters: amount of bytes to read
  * Return: Printed letters count
  */
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	char *buf;
-	int lenRead, lenWrite;
+	int fd, printed, wrote;
+	char *buff;
 
+	buff = malloc(letters * sizeof(char));
+	if (buff == NULL)
+		return (0);
 	if (filename == NULL)
 		return (0);
-
-	fd = open(filename, O_RDONLY);
+	fd = open(filename, O_RDWR);
 	if (fd == -1)
 		return (0);
-	buf = malloc(letters * sizeof(char));
-
-	if (buf == NULL)
+	printed = read(fd, buff, letters);
+	if (printed == -1)
 		return (0);
-
-	lenRead = read(fd, buf, letters);
-
-	lenWrite = write(STDOUT_FILENO, buf, lenRead);
-	if (lenWrite != lenRead && lenWrite == -1)
+	wrote = write(STDOUT_FILENO, buff, printed);
+	if (wrote == -1)
 		return (0);
-	free(buf);
+	/* if (close(fd) == -1) return (0); */
 	close(fd);
-	return (lenRead);
+	free(buff);
+	return (printed);
 }
