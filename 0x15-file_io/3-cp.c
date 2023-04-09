@@ -7,7 +7,7 @@
  * Return: Return a value
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv[])
 {
 	int fd_From, fd_To, bytes_written, bytes_read;
 	char buff[1024];
