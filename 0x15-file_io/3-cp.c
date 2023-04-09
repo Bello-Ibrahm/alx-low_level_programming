@@ -7,7 +7,7 @@
  * Return: Return a value
  */
 
-int main(int argc, char **argv[])
+int main(int argc, char *argv[])
 {
 	int fd_From, fd_To, bytes_written, bytes_read;
 	char buff[1024];
@@ -45,12 +45,12 @@ int main(int argc, char **argv[])
 	}
 	if (close(fd_From) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close file %d", fd_From);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd_From);
 		exit(100);
 	}
 	if (close(fd_To) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close file %d", fd_To);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd_To);
 		exit(100);
 	}
 	return (0);
