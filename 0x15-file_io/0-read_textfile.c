@@ -12,8 +12,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int fd, printed, wrote;
 	char *buff;
 
-	/*buff = malloc(letters * sizeof(char));*/
-	buff = malloc(letters);
+	buff = malloc(letters * sizeof(char));
 	if (buff == NULL)
 		return (0);
 	if (filename == NULL)
@@ -27,8 +26,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	wrote = write(STDOUT_FILENO, buff, printed);
 	if (wrote == -1)
 		return (0);
-	if (close(fd) == -1)
-		return (0);
+	/* if (close(fd) == -1) return (0); */
+	close(fd);
 	free(buff);
 	return (printed);
 }
