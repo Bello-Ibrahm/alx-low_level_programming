@@ -15,18 +15,18 @@ int get_bit(unsigned long int n, unsigned int index)
 }
 
 /**
- * set_bit - Sets a bit
- * @n: Integer to grab
- * @index: to go through
- * Return: Return a value
+ * clear_bit - Clear index to 0
+ * @n: Integer to pass
+ * @index: index to go to
+ * Return: Return integer value
  */
 
-int set_bit(unsigned long int *n, unsigned int index)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
 	if (index > 32)
 		return (-1);
-	(*n) |= 1 << index;
-	if (get_bit((*n), index) == 1)
+	(*n) &= ~(1 << index);
+	if (get_bit((*n), index) == 0)
 		return (1);
 	return (-1);
 }
