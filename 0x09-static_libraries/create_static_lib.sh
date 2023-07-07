@@ -1,6 +1,6 @@
 #!/bin/bash
 #!/bin/bash
 gcc -c *.c
-ar rcs libmy.a *.o
-ranlib libmy.a
+ar rcs liball.a *.o
+ranlib liball.a
 
