@@ -321,4 +321,112 @@ julien@ubuntu:~/0x0a. malloc, free$
 ```
 [4-free_grid.c](4-free_grid.c)
 
+## 5. It isn't the mountains ahead to climb that wear you out; it's the pebble in your shoe
+
+Write a function that concatenates all the arguments of your program.
+
+- Prototype: `char *argstostr(int ac, char **av);`
+- Returns `NULL` if `ac == 0` or `av == NULL`
+- Returns a pointer to a new string, or `NULL` if it fails
+- Each argument should be followed by a `\n` in the new string
+
+```
+julien@ubuntu:~/0x0a. malloc, free$ cat 100-main.c
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * main - check the code for ALX School students.
+ *
+ * Return: Always 0.
+ */
+int main(int ac, char *av[])
+{
+    char *s;
+
+    s = argstostr(ac, av);
+    if (s == NULL)
+    {
+        return (1);
+    }
+    printf("%s", s);
+    free(s);
+    return (0);
+}
+julien@ubuntu:~/0x0a. malloc, free$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 100-main.c 100-argstostr.c -o args
+julien@ubuntu:~/0x0a. malloc, free$ ./args I will "show you" how great I am
+./args
+I
+will
+show you
+how
+great
+I
+am
+julien@ubuntu:~/0x0a. malloc, free$
+```
+[100-argstostr.c](100-argstostr.c)
+
+## 6. I will show you how great I am
+
+Write a function that splits a string into words.
+
+- Prototype: `char **strtow(char *str);`
+- The function returns a pointer to an array of strings (words)
+- Each element of this array should contain a single word, null-terminated
+- The last element of the returned array should be `NULL`
+- Words are separated by spaces
+- Returns `NULL` if `str == NULL` or `str == ""`
+- If your function fails, it should return `NULL`
+
+```
+julien@ubuntu:~/0x0a. malloc, free$ cat 101-main.c
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * print_tab - Prints an array of string
+ * @tab: The array to print
+ *
+ * Return: nothing
+ */
+void print_tab(char **tab)
+{
+    int i;
+
+    for (i = 0; tab[i] != NULL; ++i)
+    {
+        printf("%s\n", tab[i]);
+    }
+}
+
+/**
+ * main - check the code for ALX School students.
+ *
+ * Return: 1 if an error occurred, 0 otherwise
+ */
+int main(void)
+{
+    char **tab;
+
+    tab = strtow("      ALX School         #cisfun      ");
+    if (tab == NULL)
+    {
+        printf("Failed\n");
+        return (1);
+    }
+    print_tab(tab);
+    return (0);
+}
+julien@ubuntu:~/0x0a. malloc, free$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 101-main.c 101-strtow.c -o strtow
+julien@ubuntu:~/0x0a. malloc, free$ ./strtow | cat -e
+ALX$
+School$
+#cisfun$
+julien@ubuntu:~/0x0a. malloc, free$
+```
+[101-strtow.c](101-strtow.c)
+
 
