@@ -9,7 +9,7 @@
  *
  * Return: 0 on succes, 1 on argv != 2, 2 on negative bytes in argv
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
 	int i, bytes;
 	char *mainaddr;
@@ -26,6 +26,7 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < bytes - 1; i++)
 	    printf("%02hhx ", mainaddr[i]);
+	
 	printf("%02hhx\n", mainaddr[i]);
 
 	return (0);
