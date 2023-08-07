@@ -110,7 +110,7 @@ Create a function that creates a file.
 
 * Prototype: `int create_file(const char *filename, char *text_content);`
 * where `filename` is the name of the file to create and `text_content` is a `NULL` terminated string to write to the file
-* Returns: `1` on success, `-1` on failure (file can not be created, file can not be written, w`rite` “fails”, etc…)
+* Returns: `1` on success, `-1` on failure (file can not be created, file can not be written, `write` “fails”, etc…)
 * The created file must have those permissions: `rw-------`. If the file already exists, do not change the permissions.
 * if the file already exists, truncate it
 * if `filename` is `NULL` return `-1`
@@ -224,9 +224,6 @@ Why you should think twice before putting pictures on social media.
 http://imgur.com/a/Mq1tc
 julien@ubuntu:~/0x15. File descriptors and permissions$ 
 ```
-
-## 4. elf
-### Advanced
 
 ## 4. elf
 Write a program that displays the information contained in the `ELF` header at the start of an `ELF` file.
