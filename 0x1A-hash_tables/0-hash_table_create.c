@@ -6,25 +6,21 @@
  *
  * Return: pointer of the newly created hash table
  */
-
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *ht;
-	hash_node_t **arr;
+	hash_table_t *hash_table;
 
-	arr = calloc(size, sizeof(*arr));
-	if (arr == NULL)
+	hash_table = malloc(sizeof(hash_table_t));
+	if (!hash_table)
 		return (NULL);
 
-	ht = malloc(sizeof(*ht));
-	if (ht == NULL)
+	hash_table->size = size;
+	hash_table->array = calloc(size, sizeof(hash_node_t *));
+	if (!(hash_table->array))
 	{
-		free(arr);
+		free(hash_table);
 		return (NULL);
 	}
 
-	ht->size = size;
-	ht->array = arr;
-
-	return (ht);
+	return (hash_table);
 }
