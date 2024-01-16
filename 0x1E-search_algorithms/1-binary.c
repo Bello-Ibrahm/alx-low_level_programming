@@ -11,13 +11,14 @@
  */
 int binary_search(int *array, size_t size, int value)
 {
-	int i, middleBound, lowerBound = 0;
-	int upperBound = size - 1;
+	int i, middleBound, lowerBound, upperBound;
 
 	if (array == NULL)
 	{
 		return (-1);
 	}
+	lowerBound = 0;
+	upperBound = size - 1;
 
 	while (lowerBound <= upperBound)
 	{
